@@ -5,12 +5,14 @@ orbs:
   # deploy-to-heroku: betterdoc/deploy-to-heroku@4.1.0
 
 workflows:
-  deploy:
+  docker-deploy:
     jobs:
       - docker/publish:
           image: $DOCKER_LOGIN/$CIRCLE_PROJECT_REPONAME
           tag: 'latest'
       # - deploy-to-heroku/docker-build-release:
       #     app-name: simple-web-xue
+  heroku_deploy:
+    jobs:
       - heroku/push-docker-image:
-        app-name: simple-web-xue
+          app-name: simple-web-xue
