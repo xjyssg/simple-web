@@ -3,7 +3,7 @@ orbs:
   docker: circleci/docker@1.0.0
   deploy-to-heroku: betterdoc/deploy-to-heroku@4.1.0
 
-  workflows:
+workflows:
   deploy:
     jobs:
       - docker/publish:
