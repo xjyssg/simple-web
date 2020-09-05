@@ -13,5 +13,5 @@ workflows:
       # - deploy-to-heroku/docker-build-release:
       #     app-name: simple-web-xue
     commands:
-      - heroku:release-docker-image:
+      - heroku/release-docker-image:
         app-name: simple-web-xue
