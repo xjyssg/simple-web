@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   docker: circleci/docker@1.0.0
-  heroku: circleci/heroku@1.2.2
+  # heroku: circleci/heroku@1.2.2
   # deploy-to-heroku: betterdoc/deploy-to-heroku@4.1.0
 
 workflows:
@@ -12,7 +12,7 @@ workflows:
           tag: 'latest'
       # - deploy-to-heroku/docker-build-release:
       #     app-name: simple-web-xue
-  heroku_deploy:
-    jobs:
-      - heroku/push-docker-image:
-          app-name: simple-web-xue
+  # heroku_deploy:
+  #   jobs:
+  #     - heroku/push-docker-image:
+  #         app-name: simple-web-xue
